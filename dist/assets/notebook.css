@@ -1,0 +1,10 @@
+.notebook-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+.notebook-form{display:grid;gap:18px}.notebook-form label{display:grid;gap:7px;font-size:14px;font-weight:600}
+.notebook-form input,.notebook-form textarea{width:100%;padding:12px;border:1px solid #b6c1cb;border-radius:3px;background:#fff;color:#233446;font:inherit}
+.notebook-form textarea{min-height:110px;resize:vertical}.notebook-form button,.backup-controls button{cursor:pointer}
+.backup-controls{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}.backup-controls input{max-width:100%}
+.local-note{border-top:1px solid #c9d0d6;padding:24px 0}.local-note h3{font-size:24px;margin:0 0 8px}.local-note h4{font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin:18px 0 6px}
+.local-note p{white-space:pre-wrap;overflow-wrap:anywhere}.local-note .meta{font-size:12px}.notebook-status{min-height:2em;color:#294f40;font-weight:600}
+.local-notice{padding:20px;background:#e8edf0;line-height:1.65;margin-bottom:24px}.notebook-grid :focus-visible{outline:3px solid #8a5438;outline-offset:3px}
+@media(max-width:800px){.notebook-grid{grid-template-columns:1fr;gap:32px}}
+

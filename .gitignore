@@ -1,0 +1,9 @@
+.openai/
+_site/
+__pycache__/
+node_modules/
+.env*
+*.log
+*.zip
+evade-research-backup-*.json
+

@@ -1,0 +1,94 @@
+/* Shared visual finish for the standalone research and project documents.
+   Link after each document's own styles. No layout or interaction overrides. */
+:root {
+  --paper: #f2f5f7;
+  --ink: #233446;
+  --muted: #526171;
+  --white: #fcfdfe;
+  --line: #c8d1d9;
+  --mint: #dce4ea;
+  --teal: #965b3c;
+  --forest: #965b3c;
+  --accent: #965b3c;
+  --surface: #dce4ea;
+  --sans: 'Aptos', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+h1, h2, h3, .dek, .intro, .quote, .callout, .stat strong {
+  font-family: var(--sans);
+  font-weight: 500;
+}
+h1 { font-size: clamp(39px, 4.8vw, 64px); line-height: 1.13; letter-spacing: -.035em; }
+h2 { letter-spacing: -.025em; line-height: 1.2; }
+h3 { letter-spacing: -.018em; }
+h1 em, h2 em, h3 em { font-style: normal; font-weight: inherit; color: var(--accent); }
+.intro, .dek { font-size: 21px; line-height: 1.6; letter-spacing: -.012em; }
+.quote, .callout { line-height: 1.5; }
+a { color: var(--accent); }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.brand, .pubbrand { font-family: var(--sans); font-weight: 600; }
+.top, .publication-nav, .pubnav, body > nav {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--sans);
+}
+.top a, .publication-nav a, .pubnav a, body > nav a { color: var(--paper); }
+.publication-nav .pubbrand, .pubnav .pubbrand { font: 600 23px/1.2 var(--sans); letter-spacing: -.6px; }
+.top :focus-visible, .publication-nav :focus-visible, .pubnav :focus-visible, body > nav :focus-visible {
+  outline-color: #e5bc9f;
+}
+.brand small { color: #d2dde6; }
+.label { background: var(--surface); color: var(--ink); }
+.eyebrow, .kicker, .tag, .number { color: var(--accent); letter-spacing: .12em; }
+.notice, .note, .status, .formula { background: var(--surface); border-color: var(--accent); }
+.notice, .note, .status, .flow span { --accent: #875134; --teal: #875134; --forest: #875134; }
+.concept { border-top-color: var(--accent); border-bottom-color: var(--line); }
+.overview { background: var(--ink); color: var(--white); }
+.overview h2 { color: var(--paper); }
+.overview .tag, .overview a { color: #e5bc9f !important; }
+.overview .small { color: #c2ced8; }
+.flow span { background: #e4ebf0; color: var(--ink); }
+.flow b { color: var(--accent); }
+.small, .muted, .meta, .sources, figcaption, footer, .footer { color: var(--muted); }
+.card, .block, figure { background: var(--white); border-color: var(--line); }
+.card { border-radius: 0; }
+.card, .side section, .phase, .stat, .sources, footer, .footer { border-color: var(--line); }
+.stat { border-top-color: var(--accent); }
+.canvas { background: var(--line); border-color: var(--line); }
+th { background: var(--ink); color: var(--paper); }
+th, td { border-bottom-color: var(--line); }
+tbody tr:nth-child(even) { background: #e8edf1; }
+code { background: var(--surface); }
+button { background: var(--ink); color: var(--paper); font-family: var(--sans); }
+button:hover { background: var(--accent); }
+.legend span::before { background: var(--ink); }
+.legend span + span::before { background: #b17b59; }
+/* Recolour existing original chart marks without changing any observations. */
+svg [fill='#122c3c'], svg [fill='#14242c'] { fill: var(--ink); }
+svg [fill='#7aab94'] { fill: #b17b59; }
+svg [fill='#596b76'] { fill: var(--muted); }
+svg [stroke='#dce2da'] { stroke: #dce4ea; }
+svg text { font-family: var(--sans); }
+@media (max-width: 760px) {
+  h1 { font-size: clamp(35px, 7.6vw, 46px); letter-spacing: -.03em; }
+  .intro, .dek { font-size: 19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  body { background: white; }
+  h1 { font-size: 34pt; }
+  .top { background: white; color: var(--ink); }
+  .overview { background: #e8edf1; color: var(--ink); }
+  .overview h2, .overview .tag, .overview a { color: #875134 !important; }
+  .overview .small { color: var(--muted); }
+  th { background: #e8edf1; color: var(--ink); }
+  a { color: var(--ink); }
+}
